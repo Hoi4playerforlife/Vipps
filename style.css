@@ -1,643 +1,93 @@
-/* style.css – tilpasset HTML-en fra Vipps-forsiden */
 
-/* Grunnoppsett */
-:root {
-    --orange: #ff5b24;
-    --orange-dark: #e94b16;
-    --ink: #171717;
-    --muted: #55545a;
-    --cream: #fff8f3;
-    --surface: #ffffff;
-    --border: #e8e5e2;
-    --radius: 24px;
-    --page-width: 1200px;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
+/* Grunnleggende design */
 body {
-    min-width: 320px;
-    color: var(--ink);
-    background: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
-}
-
-button:focus-visible,
-a:focus-visible {
-    outline: 3px solid #315efb;
-    outline-offset: 4px;
-}
-
-/* Felles bredde og overskrifter */
-.XW4q-G_layoutWrapper,
-.X7YKEq_layoutWrapper,
-.yHYaBG_blockWrapper,
-.mucvFG_footerWrapper {
-    width: min(100% - 48px, var(--page-width));
-    margin-inline: auto;
-}
-
-.NHbCyG_baseHeadingStyle {
-    color: var(--ink);
-    font-weight: 750;
-    line-height: 1.12;
-    letter-spacing: -0.035em;
-}
-
-.NHbCyG_heading1 {
-    font-size: clamp(2.7rem, 6vw, 5.5rem);
-}
-
-.NHbCyG_heading2 {
-    font-size: clamp(2rem, 4vw, 3.4rem);
-}
-
-.NHbCyG_heading3 {
-    font-size: clamp(1.6rem, 3vw, 2.3rem);
-}
-
-.NHbCyG_heading4 {
-    font-size: 1.25rem;
-}
-
-.NHbCyG_heading6 {
-    font-size: 1rem;
-}
-
-/* Toppmeny */
-.X7YKEq_topBar {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    background: var(--orange);
-}
-
-.X7YKEq_layoutWrapper {
-    min-height: 88px;
-    display: flex;
-    align-items: center;
-}
-
-.X7YKEq_topBarContent {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.X7YKEq_privateLogo {
-    display: inline-flex;
-    align-items: center;
-}
-
-.X7YKEq_privateLogo svg {
-    width: 128px;
-    height: auto;
-}
-
-.X7YKEq_navigationContainer,
-.X7YKEq_buttonGroup {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-/* Hovedinnhold */
-.yHYaBG_main {
-    overflow: hidden;
-}
-
-.yHYaBG_blockWrapper {
-    width: 100%;
-}
-
-/* Hero / første seksjon */
-.vWRzbG_wrapper {
-    position: relative;
-    isolation: isolate;
-    min-height: 570px;
-    display: flex;
-    align-items: center;
-    padding: 90px max(24px, calc((100vw - var(--page-width)) / 2));
-    overflow: hidden;
-    background: var(--cream);
-}
-
-.vWRzbG_withImage {
-    color: #fff;
-    background: #25202a;
-}
-
-.vWRzbG_imageBackground {
-    position: absolute;
-    z-index: -2;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.vWRzbG_withImage::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(0,0,0,.68), rgba(0,0,0,.12));
-}
-
-.vWRzbG_content {
-    width: min(100%, 720px);
-}
-
-.vWRzbG_contentWithImage {
-    color: #fff;
-}
-
-.vWRzbG_title {
-    max-width: 750px;
-    margin-bottom: 20px;
-    color: inherit;
-}
-
-.vWRzbG_subtitle {
-    max-width: 560px;
-    margin-bottom: 30px;
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-    line-height: 1.5;
-}
-
-/* Knapper */
-.ElzWhW_buttonGroup {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 14px;
-}
-
-.ElzWhW_center {
-    justify-content: center;
-}
-
-.ElzWhW_stretched {
-    justify-content: flex-start;
-}
-
-.Y-Cpjq_baseButton,
-._5s0roW_button {
-    min-height: 54px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 13px 25px;
-    border: 2px solid transparent;
-    border-radius: 999px;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.2;
+    font-family: Arial, sans-serif;
+    background-color: #fff4ed;
+    color: #161225;
     text-align: center;
-    transition: background .2s ease, color .2s ease, transform .2s ease;
+    margin: 0;
 }
 
-._5s0roW_primary {
-    color: #fff;
-    background: var(--orange);
+/* Toppfelt */
+header {
+    background-color: #ff5b24;
+    color: white;
+    padding: 30px;
 }
 
-._5s0roW_primary:hover {
-    background: var(--orange-dark);
-    transform: translateY(-2px);
+header h1 {
+    font-size: 45px;
+    margin: 0;
 }
 
-._5s0roW_secondary {
-    color: var(--ink);
-    background: #fff;
-    border-color: #fff;
+header p {
+    margin-top: 10px;
 }
 
-._5s0roW_secondary:hover {
-    background: #f1efed;
-    transform: translateY(-2px);
+/* Hovedboksen */
+main {
+    background-color: white;
+    max-width: 400px;
+    margin: 70px auto;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-._5s0roW_content {
-    display: inline-block;
+/* Overskrifter */
+h2 {
+    color: #551488;
+    font-size: 26px;
 }
 
-.fZHXXa_animation {
-    display: none;
+h3 {
+    color: #551488;
 }
 
-/* Tekst- og bildefelt */
-.ddQ9Aa_wrapper {
-    width: min(100% - 48px, var(--page-width));
-    margin: 100px auto;
+/* Vanlig tekst */
+main p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.ddQ9Aa_content {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
-    align-items: center;
-    gap: clamp(40px, 7vw, 100px);
+/* Bekreftelsesknapp */
+button {
+    background-color: #ff5b24;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
 }
 
-.ddQ9Aa_reversed {
-    direction: rtl;
+button:hover {
+    background-color: #e94b16;
 }
 
-.ddQ9Aa_reversed > * {
-    direction: ltr;
-}
-
-.ddQ9Aa_textSide {
-    max-width: 590px;
-}
-
-.ddQ9Aa_headerContainer {
-    margin-bottom: 24px;
-}
-
-.ddQ9Aa_title {
-    max-width: 650px;
-}
-
-.ZRBYdG_p {
-    color: var(--muted);
-    font-size: 1.15rem;
-    line-height: 1.8;
-}
-
-.ddQ9Aa_imageSide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-}
-
-.ddQ9Aa_mediaWrapper {
-    width: min(100%, 430px);
-    display: flex;
-    justify-content: center;
-}
-
-._004Blq_illustration {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Kort-seksjon */
-.WdX8wG_ctaNavigationBlock {
-    width: min(100% - 48px, var(--page-width));
-    margin: 110px auto;
-}
-
-.WdX8wG_blockHeading {
-    margin-bottom: 36px;
-}
-
-.WdX8wG_cardsContainer {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.WdX8wG_card {
-    min-height: 230px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 22px;
-    padding: 26px;
-    overflow: hidden;
-    color: var(--ink);
-    background: #f7f5f3;
-    border: 1px solid transparent;
-    border-radius: var(--radius);
-    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-}
-
-.WdX8wG_card:hover {
-    transform: translateY(-5px);
-    background: #fff;
-    border-color: var(--border);
-    box-shadow: 0 14px 35px rgba(0,0,0,.08);
-}
-
-.WdX8wG_cardFlexWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 95px;
-}
-
-.WdX8wG_cardFlexWrapper svg {
-    max-width: 100%;
-    max-height: 115px;
-}
-
-.WdX8wG_cardContent {
-    margin-top: auto;
-}
-
-.WdX8wG_cardTitle {
-    margin-bottom: 8px;
-}
-
-.WdX8wG_cardText {
-    color: var(--muted);
-    font-size: .98rem;
-    line-height: 1.55;
-}
-
-/* Siste nytt */
-.t-Cc7a_topNewsBlock {
-    width: min(100% - 48px, var(--page-width));
-    margin: 110px auto;
-}
-
-.t-Cc7a_blockTitle {
-    margin-bottom: 32px;
-}
-
-.t-Cc7a_articlesContainer {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.t-Cc7a_articleCard {
-    min-width: 0;
-    overflow: hidden;
-    background: #f7f5f3;
-    border-radius: var(--radius);
-}
-
-.t-Cc7a_articleImageContainer {
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
-    background: #eee;
-}
-
-.t-Cc7a_articleImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .3s ease;
-}
-
-.t-Cc7a_articleCard:hover .t-Cc7a_articleImage {
-    transform: scale(1.04);
-}
-
-.t-Cc7a_articleContent {
-    padding: 22px;
-}
-
-.t-Cc7a_publishedDate {
-    display: block;
-    margin-bottom: 10px;
-    color: #777;
-    font-size: .88rem;
-}
-
-.t-Cc7a_articleTitle {
-    font-size: 1.15rem;
-    font-weight: 700;
-    line-height: 1.4;
-}
-
-.t-Cc7a_primaryLinkContainer {
+/* Advarsel om phishing */
+.advarsel {
+    background-color: #fff0cc;
+    border: 2px solid #ff985f;
+    border-radius: 12px;
+    padding: 20px;
     margin-top: 30px;
 }
 
-/* Hjelpeseksjon – samme tekst/bilde-oppsett */
-.ddQ9Aa_label {
-    margin-bottom: 12px;
-    color: var(--orange-dark);
-    font-size: .95rem;
-    font-weight: 700;
+.advarsel p {
+    font-size: 14px;
 }
 
-.ddQ9Aa_image {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius);
-}
-
-.ddQ9Aa_mobileImageContainer {
-    display: none;
-}
-
-/* Bunnmeny */
-.mucvFG_footer {
-    padding: 75px 0 28px;
-    color: #fff;
-    background: #201d25;
-}
-
-.mucvFG_footerWrapper {
-    display: grid;
-    grid-template-columns: 1.2fr repeat(3, 1fr);
-    gap: 45px 35px;
-}
-
-.mucvFG_column {
-    min-width: 0;
-}
-
-.mucvFG_columnOne svg {
-    width: 128px;
-    height: auto;
-}
-
-.mucvFG_column h6 {
-    margin-bottom: 18px;
-    color: #fff;
-}
-
-.mucvFG_linksGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.mucvFG_link {
-    width: fit-content;
-    color: rgba(255,255,255,.78);
-    transition: color .2s ease;
-}
-
-.mucvFG_link:hover {
-    color: #fff;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-.mucvFG_socialAndDownloads {
-    grid-column: 2 / -1;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-.mucvFG_socialIcons,
-.mucvFG_downloadButtons {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.mucvFG_socialIcons img,
-.mucvFG_downloadButtons img {
-    width: auto;
-    max-height: 42px;
-}
-
-.mucvFG_footerBottom {
-    grid-column: 1 / -1;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255,255,255,.2);
-    color: rgba(255,255,255,.65);
-    font-size: .88rem;
-}
-
-/* Cookiebot – dialogen er skjult i HTML-en, men får stil hvis den vises */
-#CybotCookiebotDialog {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Mobil og nettbrett */
-@media (max-width: 900px) {
-    .vWRzbG_wrapper {
-        min-height: 500px;
-        padding-block: 75px;
-    }
-
-    .ddQ9Aa_content {
-        gap: 38px;
-    }
-
-    .WdX8wG_cardsContainer,
-    .t-Cc7a_articlesContainer {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .mucvFG_footerWrapper {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .mucvFG_socialAndDownloads {
-        grid-column: 1 / -1;
-    }
-}
-
+/* Tilpasning til mobil */
 @media (max-width: 600px) {
-    .XW4q-G_layoutWrapper,
-    .X7YKEq_layoutWrapper,
-    .ddQ9Aa_wrapper,
-    .WdX8wG_ctaNavigationBlock,
-    .t-Cc7a_topNewsBlock,
-    .mucvFG_footerWrapper {
-        width: min(100% - 32px, var(--page-width));
+    main {
+        margin: 30px 15px;
+        padding: 25px;
     }
 
-    .X7YKEq_layoutWrapper {
-        min-height: 70px;
-    }
-
-    .vWRzbG_wrapper {
-        min-height: 520px;
-        padding: 65px 22px;
-        align-items: flex-end;
-    }
-
-    .vWRzbG_withImage::after {
-        background: linear-gradient(0deg, rgba(0,0,0,.75), rgba(0,0,0,.12));
-    }
-
-    .vWRzbG_subtitle {
-        font-size: 1.05rem;
-    }
-
-    .ElzWhW_buttonGroup {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .Y-Cpjq_baseButton,
-    ._5s0roW_button {
-        width: 100%;
-    }
-
-    .ddQ9Aa_wrapper,
-    .WdX8wG_ctaNavigationBlock,
-    .t-Cc7a_topNewsBlock {
-        margin-block: 70px;
-    }
-
-    .ddQ9Aa_content {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .ddQ9Aa_reversed {
-        direction: ltr;
-    }
-
-    .ddQ9Aa_imageSide {
-        order: 2;
-    }
-
-    .WdX8wG_cardsContainer,
-    .t-Cc7a_articlesContainer {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .WdX8wG_card {
-        min-height: 190px;
-    }
-
-    .mucvFG_footer {
-        padding-top: 55px;
-    }
-
-    .mucvFG_footerWrapper {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px 22px;
-    }
-
-    .mucvFG_columnOne,
-    .mucvFG_socialAndDownloads,
-    .mucvFG_footerBottom {
-        grid-column: 1 / -1;
+    header h1 {
+        font-size: 36px;
     }
 }
