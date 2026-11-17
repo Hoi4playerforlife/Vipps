@@ -1,93 +1,38 @@
 
-/* Grunnleggende design */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #fff4ed;
-    color: #161225;
     text-align: center;
-    margin: 0;
 }
 
-/* Toppfelt */
 header {
     background-color: #ff5b24;
     color: white;
-    padding: 30px;
+    padding: 25px;
 }
 
-header h1 {
-    font-size: 45px;
-    margin: 0;
-}
-
-header p {
-    margin-top: 10px;
-}
-
-/* Hovedboksen */
 main {
     background-color: white;
     max-width: 400px;
     margin: 70px auto;
-    padding: 35px;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
 }
 
-/* Overskrifter */
 h2 {
     color: #551488;
-    font-size: 26px;
 }
 
-h3 {
-    color: #551488;
-}
-
-/* Vanlig tekst */
-main p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Bekreftelsesknapp */
 button {
     background-color: #ff5b24;
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 15px 25px;
     border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
-    margin-top: 15px;
 }
 
 button:hover {
     background-color: #e94b16;
-}
-
-/* Advarsel om phishing */
-.advarsel {
-    background-color: #fff0cc;
-    border: 2px solid #ff985f;
-    border-radius: 12px;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-.advarsel p {
-    font-size: 14px;
-}
-
-/* Tilpasning til mobil */
-@media (max-width: 600px) {
-    main {
-        margin: 30px 15px;
-        padding: 25px;
-    }
-
-    header h1 {
-        font-size: 36px;
-    }
 }

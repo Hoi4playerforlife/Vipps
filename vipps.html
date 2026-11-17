@@ -3,81 +3,21 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vipps - Skoleøvelse</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff4ed;
-            text-align: center;
-            margin: 0;
-        }
-
-        header {
-            background-color: #ff5b24;
-            color: white;
-            padding: 25px;
-        }
-
-        main {
-            background-color: white;
-            max-width: 400px;
-            margin: 70px auto;
-            padding: 30px;
-            border-radius: 15px;
-        }
-
-        h2 {
-            color: #ff5b24;
-        }
-
-        button {
-            background-color: #ff5b24;
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .advarsel {
-            background-color: #fff0cc;
-            padding: 15px;
-            margin-top: 25px;
-            border-radius: 8px;
-        }
-    </style>
+    <title>Vipps</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <h1>Vipps</h1>
-        <p>Fiktiv skoleøvelse</p>
     </header>
 
     <main>
         <h2>Bekreft kontoen din</h2>
-
-        <p>Vi har oppdaget uvanlig aktivitet
-        på kontoen din.</p>
-
-        <p>For å unngå at kontoen blir
-        sperret, må du bekrefte den
-        innen 24 timer.</p>
-
-        <button onclick="alert('Dette er en phishingdemonstrasjon!')">
+        <p>Vi har oppdaget uvanlig aktivitet på kontoen din.</p>
+        <p>Bekreft kontoen din innen 24 timer for å unngå sperring.</p>
+        <button onclick="alert('Ikke oppgi personlig informasjon via lenker i epost!')">
             Bekreft konto
         </button>
-
-        <div class="advarsel">
-            <h3>Dette er phishing!</h3>
-            <p>Dette er en fiktiv nettside
-            laget til en skoleoppgave.</p>
-            <p>Ekte Vipps vil ikke be deg
-            oppgi passord gjennom en
-            lenke i en mistenkelig epost.</p>
-        </div>
     </main>
-
 </body>
 </html>
