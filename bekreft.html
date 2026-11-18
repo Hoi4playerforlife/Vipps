@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Vipps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vipps</h1>
+    </header>
+
+    <main>
+        <h2>Bekreft kontoen din</h2>
+        <p>Fyll inn oppdiktede testopplysninger.</p>
+
+        <form onsubmit="visInfo(); return false;">
+            <input id="navn" placeholder="Oppdiktet navn" required>
+            <input id="nummer" placeholder="Fiktivt kundenummer" required>
+            <input id="farge" placeholder="Favorittfarge" required>
+            <input id="balanse" placeholder="Oppdiktet kontobalanse" required>
+
+             <a href="mailto:dinmail@example.com?subject=Phishingtest&body=Dette%20er%20en%20skole%C3%B8velse">
+            Bekreft
+        </a>
+        </form>
+
+        <p id="resultat"></p>
+
+       
+    </main>
+
+    <script>
+        function visInfo() {
+            let navn = document.getElementById("navn").value;
+            let nummer = document.getElementById("nummer").value;
+            let farge = document.getElementById("farge").value;
+            let balanse = document.getElementById("balanse").value;
+
+            document.getElementById("resultat").textContent =
+                "Navn: " + navn +
+                " | Kundenummer: " + nummer +
+                " | Favorittfarge: " + farge +
+                " | Balanse: " + balanse;
+        }
+    </script>
+</body>
+</html>
