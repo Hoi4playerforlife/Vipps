@@ -3,35 +3,49 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <title>Vipps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishingtest | Resultat</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Vipps</h1>
+        <h1>Phishingtest</h1>
     </header>
 
-    <main>
-        <h2>Bekreft kontoen din</h2>
-        <p>Fyll inn oppdiktede testopplysninger.</p>
+    <main class="resultat">
 
-        <form onsubmit="visInfo(); return false;">
-            <input id="navn" placeholder="Oppdiktet navn" required>
-            <input id="nummer" placeholder="Fiktivt kundenummer" required>
-            <input id="farge" placeholder="Favorittfarge" required>
-            <input id="balanse" placeholder="Oppdiktet kontobalanse" required>
+        <h2>Jeg har hacket deg!</h2>
 
-            <button type="submit">Bekreft</button>
-        </form>
+        <p class="stor-tekst">
+            Jeg er på vei til Dubai!
+            Ha et fint liv!
+        </p>
 
-        <h2 id="resultat"></h2>
+        <p>
+            Dette var heldigvis bare en
+            fiktiv skoleøvelse.
+            Ingen konto er hacket.
+        </p>
+
+        <h3>Hva lærte du?</h3>
+
+        <p>
+            Falske nettsider kan forsøke
+            å lure deg til å oppgi personlig
+            informasjon.
+        </p>
+
+        <p>
+            Sjekk alltid nettadressen før
+            du skriver inn opplysninger.
+        </p>
+
+        <a class="knapp" href="vipps.html">
+            Tilbake til forsiden
+        </a>
+
     </main>
 
-    <script>
-        function visInfo() {
-            document.getElementById("resultat").textContent =
-                "Jeg har hacket deg og jeg er på vei til Dubai! Ha et fint liv";
-        }
-    </script>
 </body>
 </html>

@@ -3,21 +3,70 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <title>Vipps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishingtest | Skoleøvelse</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Vipps</h1>
+        <h1>Phishingtest</h1>
+        <p>Fiktiv skoleøvelse</p>
     </header>
 
     <main>
-        <h2>Bekreft kontoen din</h2>
-        <p>Vi har oppdaget uvanlig aktivitet på kontoen din.</p>
-        <p>Bekreft kontoen din innen 24 timer for å unngå sperring.</p>
-        
-        <a href="bekreft.html">Bekreft konto</a>
+        <h2>Bekreft testkontoen din</h2>
 
+        <p>
+            Dette er en simulering av en falsk
+            betalingsside. Bruk kun oppdiktede
+            opplysninger.
+        </p>
+
+        <form action="bekreft.html" method="get">
+
+            <label for="navn">Navn</label>
+            <input
+                type="text"
+                id="navn"
+                placeholder="Oppdiktet navn"
+                required
+            >
+
+            <label for="nummer">Kundenummer</label>
+            <input
+                type="text"
+                id="nummer"
+                placeholder="Fiktivt kundenummer"
+                required
+            >
+
+            <label for="farge">Favorittfarge</label>
+            <input
+                type="text"
+                id="farge"
+                placeholder="Favorittfarge"
+                required
+            >
+
+            <label for="balanse">Kontobalanse</label>
+            <input
+                type="text"
+                id="balanse"
+                placeholder="Oppdiktet beløp"
+                required
+            >
+
+            <button type="submit">
+                Bekreft
+            </button>
+
+        </form>
     </main>
+
+    <footer>
+        <p>Kun for undervisning</p>
+    </footer>
+
 </body>
 </html>
