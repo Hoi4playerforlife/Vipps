@@ -3,12 +3,12 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <title>Vipps</title>
+    <title>Fiktiv phishingtest</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Vipps</h1>
+        <h1>Phishingtest</h1>
     </header>
 
     <main>
@@ -21,28 +21,16 @@
             <input id="farge" placeholder="Favorittfarge" required>
             <input id="balanse" placeholder="Oppdiktet kontobalanse" required>
 
-             <a href="mailto:vippsbedriftnorge@gmail.com?subject=Phishingtest&body=Du%20er%20en%20er%C3%hacket">
-            Bekreft
-        </a>
+            <button type="submit">Bekreft</button>
         </form>
 
-        <p id="resultat"></p>
-
-       
+        <h2 id="resultat"></h2>
     </main>
 
     <script>
         function visInfo() {
-            let navn = document.getElementById("navn").value;
-            let nummer = document.getElementById("nummer").value;
-            let farge = document.getElementById("farge").value;
-            let balanse = document.getElementById("balanse").value;
-
             document.getElementById("resultat").textContent =
-                "Navn: " + navn +
-                " | Kundenummer: " + nummer +
-                " | Favorittfarge: " + farge +
-                " | Balanse: " + balanse;
+                "Jeg har hacket deg og jeg er på vei til Dubai! Ha et fint liv";
         }
     </script>
 </body>
